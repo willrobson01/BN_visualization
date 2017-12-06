@@ -32,7 +32,8 @@ links <- read.csv("./Dataset1-Media-Example-EDGES.csv", header=T, as.is=T, sep="
 
 nodes$shape <- "dot"  
 nodes$shadow <- TRUE # Nodes will drop shadow
-nodes$title <- nodes$riskfactor.txt # Text on click
+nodes$hlpString<-sapply(nodes$riskfactor.txt, function(x) return(paste(strwrap(x,60), collapse="<br/>")))
+nodes$title <- paste0("<p>", nodes$hlpString, "</p") # Text on click
 nodes$label <- nodes$riskfactor # Node label
 #$size <- nodes$audience.size # Node size
 nodes$borderWidth <- 2 # Node border width

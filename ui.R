@@ -1,6 +1,8 @@
 library(shiny)
 library(shinydashboard)
 require(visNetwork)
+library(DT)
+
 # library(dygraphs) # optional, used for dygraphs
 
 # Header elements for the visualization
@@ -26,11 +28,14 @@ sidebar <- dashboardSidebar(
 body <- dashboardBody(
   tabItems(
     # First tab content
-    tabItem(tabName = "fb",
-            fluidRow(visNetworkOutput("network")
-            )
-    ),
     
+    tabItem(tabName = "fb",
+            fluidRow(selectInput("cpt","Display",c("Info" ,"CPT"), selected="Info")),
+            fluidRow(visNetworkOutput("network"), height="1200px"),
+            uiOutput("dt_UI"),
+            uiOutput("dt_UI2")
+            )
+    ,
     # Second tab content
     tabItem(tabName = "mi",
             h2("Modify model input")
