@@ -1,0 +1,17 @@
+id;riskfactor;riskfactor.type;riskfactor.txt;type.label
+s01;Gender;DEM;Being female is the most important risk factor for breast cancer ;Demographic
+s02;Alcohol;BEH;Many studies show drinking alcohol increases the risk of breast cancer ;Behavioural
+s03;BRCA1 gene mutation;GEN;Women who have a BRCA1 gene mutation have an increased risk of breast cancer ;Genetic
+s04;BRCA2  gene mutation;GEN;Women who have a BRCA2 gene mutation have an increased risk of breast cancer ;Genetic
+s05;ATM gene mutation;GEN;Mutation of ATM can increase Breast cancer risk factor.;Genetic
+s06;TP53 gene mutation;GEN;Mutation of TP53 can increase Breast cancer risk factor;Genetic
+s07;Other mutation;HLP;;
+s08;BRCA1/2 gene mutation;HLP;;
+s09;Genetic dispostion;HLP;;
+s10;Hormonal factors;HLP;;
+s11;Birth control pills (Oral contraceptives);BEH;Current or recent use of birth control pills (oral contraceptives) slightly increases the risk of breast cancer ;Behavioural
+s12;Hormonal drugs;HLP;;
+s13;Menopausal hormone therapy - estrogen plus progestin ;CLIN;In the past, many women used menopausal hormone therapy (MHT) to relieve hot flashes and other symptoms of menopause. MHT is also known as postmenopausal hormone therapy and hormone replacement therapy. Estrogen plus progestin increases the risk of breast cancer and breast cancer death.;Clinical
+s14;Environmental risks;HLP;;
+s15;Smoking ;BEH;Smoking increases the risk of many cancers, but its effect on breast cancer is still under study. ;Behavioural
+s16;Breast Cancer;DISEASE;positive-negative;
