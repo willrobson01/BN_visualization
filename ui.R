@@ -1,6 +1,8 @@
 library(shiny)
 library(shinydashboard)
 require(visNetwork)
+library(DT)
+
 # library(dygraphs) # optional, used for dygraphs
 
 # Header elements for the visualization
@@ -27,9 +29,11 @@ body <- dashboardBody(
   tabItems(
     # First tab content
     tabItem(tabName = "fb",
-            fluidRow(visNetworkOutput("network")
+            fluidRow(visNetworkOutput("network"), height="600px"),
+            fluidRow(dataTableOutput("displaylabel")),
+            uiOutput("dt_UI")
             )
-    ),
+    ,
     
     # Second tab content
     tabItem(tabName = "mi",
