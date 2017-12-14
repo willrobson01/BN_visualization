@@ -52,5 +52,15 @@ shinyServer(function(input, output) {
     DT::dataTableOutput('table.cpt')
     }
   )
-  
+
+  output$network <- renderVisNetwork({
+    visNetwork(nodes, links) %>%
+      visOptions(highlightNearest = TRUE, 
+                 selectedBy = "type.label")  %>%
+      visEvents(select = "function(nodes) {
+                Shiny.onInputChange('current_node_id', nodes.nodes);
+                ;}")
+  }) 
+
+
 })

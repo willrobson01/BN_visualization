@@ -28,8 +28,8 @@ sidebar <- dashboardSidebar(
 body <- dashboardBody(
   tabItems(
     # First tab content
-    
     tabItem(tabName = "fb",
+
             fluidRow(selectInput("cpt","Display",c("Info" ,"CPT"), selected="Info")),
             fluidRow(visNetworkOutput("network"), height="1200px"),
             uiOutput("dt_UI"),
